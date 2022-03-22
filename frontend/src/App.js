@@ -1,60 +1,27 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
-import jwt_decode from "jwt-decode";
-import setAuthToken from "./utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "./actions/authActions";
-import { ToastContainer, toast } from "react-toastify";
-import store from "./store";
-import "./App.css";
-import Header from "./layouts/Header";
-import Footer from "./layouts/Footer";
-import Welcome from "./components/Welcome";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
-import PrivateRoute from "./common/PrivateRoute";
-import Dashboard from "./components/Dashboard";
-const SweetAlert = require("react-bootstrap-sweetalert");
-// Check for token
-if (localStorage.jwtToken) {
-  // Set auth token header auth
-  setAuthToken(localStorage.jwtToken);
-  // Decode token and get user info and exp
-  const decoded = jwt_decode(localStorage.jwtToken);
-  // Set user and isAuthenticated
-  store.dispatch(setCurrentUser(decoded));
-
-  // Check for expired token
-  const currentTime = Date.now() / 1000;
-  if (decoded.exp < currentTime) {
-    // Logout user
-    store.dispatch(logoutUser());
-    // TODO: Clear current Profile
-
-    // Redirect to login
-    window.location.href = "/login";
-  }
-}
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Router>
-          <div>
-            <Header />
-            <ToastContainer />
-            <Route exact path="/" component={Welcome} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            </Switch>
-            <Footer />
-          </div>
-        </Router>
-      </Provider>
-    );
-  }
-}
-
+import React from "react";
+ 
+// We use Route in order to define the different routes of our application
+import { Route, Routes } from "react-router-dom";
+ 
+// We import all the components we need in our app
+import Navbar from "./components/navbar";
+import RecordList from "./components/recordList";
+import Edit from "./components/edit";
+import Create from "./components/create";
+import ToolsPage from "./components/ToolsPage";
+ 
+const App = () => {
+ return (
+   <div>
+     <Navbar />
+     <Routes>
+       <Route exact path="/" element={<RecordList />} />
+       <Route path="/edit/:id" element={<Edit />} />
+       <Route path="/create" element={<Create />} />
+       <Route path="/ToolsPage" element={<ToolsPage />} />
+     </Routes>
+   </div>
+ );
+};
+ 
 export default App;

@@ -1,0 +1,90 @@
+#Portfolio.project.component__space {
+    width: 98vw;
+    background-color: orange;
+}
+#root div div#Portfolio.project.component__space .container5 .row {
+    width: 95vw;
+    height: 50vh;
+    display: flex;
+    display: grid;
+    grid-template-columns: 20.5vw 20.5vw 20.5vw 20.5vw;
+    
+    column-gap: 4vw;
+    margin-left: 2.5vw;
+    background-color: blue;
+}
+
+.project__img {
+    width: 19.9vw;
+    height: 30vh;
+    border-color: red;
+    margin-left: -.4vw;
+
+    
+
+}
+
+.container5 {
+    width: 97vw;
+    height: 60vw;
+    background-color: pink;
+    margin-top: -50vh;
+    
+}
+
+.col__3 {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    width: 31.5vw;
+    
+}
+
+#root div div#Portfolio.project.component__space .container5 .row .col__3 .project__box.pointer.relative .project_meta.absolute {
+    display: flex;
+    justify-content: center;
+
+    background-color: pink;
+}
+
+.project__meta.absolute h5 {
+    width: 18vw;
+    background: transparent;
+    display: flex;
+    margin-top: 0vh;
+    font-size: 3vh;
+    height: 2vh;
+    justify-content: center;
+    position: fixed;
+    color: silver;
+    font-weight: 650;
+
+}
+
+.project__meta.absolute h4 {
+    width: 18vw;
+    background: transparent;
+    display: flex;
+    margin-top: 5vh;
+    font-size: 2.5vh;
+    height: 2vh;
+    justify-content: center;
+    position: fixed;
+    color: silver;
+    font-weight: 650
+}
+
+.project__btn1 {
+    display: flex;
+    width: 8vw;
+    color: silver;
+    font-size: 2.5vh;
+    height: 4vh;
+    background-color: blue;
+    justify-content: center;
+    margin-top: 10vh;
+    position: fixed;
+    margin-left: 5vw;
+    border-radius: 10px;
+    text-decoration: none;
+}

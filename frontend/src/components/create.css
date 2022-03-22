@@ -1,0 +1,31 @@
+#root div div form .form-group label {
+    width: 8vw;
+    height: 4vh;
+    color: silver;
+    font-size: 2.5vh;
+    /* margin-left: .5vw; */
+}
+
+#root div div form {
+    margin-left: .5vw;
+}
+
+#root div div form .form-group4 {
+    font-size: 2.5vh; 
+}
+
+#root div div form .form-group5 input.btn.btn-primary { 
+    width: 11vw;
+    height: 5vh;
+    font-size: 2.5vh;   
+    color: silver;
+    justify-content: center;
+}
+
+#root div div{
+    margin-top: 1vh
+}
+
+#root div {
+    margin-top: 43vh;
+}

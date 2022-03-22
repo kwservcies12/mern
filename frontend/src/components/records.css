@@ -1,0 +1,11 @@
+#root div div table.table.table-striped tbody tr td {
+    color: silver;  
+    border-color: silver;
+    font-size: 2.5vh;
+    width: 20vw;
+    justify-content: center;
+    text-align: center;
+}
+#root div div table.table.table-striped tbody tr {
+    justify-content: center;
+}
